@@ -40,13 +40,14 @@ export default function extractBrush(color?: Color) {
     return int32ARGBColor;
   }
 
+  const colorObj = color as any;
   // iOS PlatformColor
-  if ('semantic' in color: any) {
+  if ('semantic' in colorObj) {
     return [0, color];
   }
 
   // Android PlatformColor
-  if ('resource_paths' in color: any) {
+  if ('resource_paths' in colorObj) {
     return [0, color];
   }
 
