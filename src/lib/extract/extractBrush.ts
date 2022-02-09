@@ -41,12 +41,12 @@ export default function extractBrush(color?: Color) {
   }
 
   // iOS PlatformColor
-  if ('semantic' in color) {
+  if ('semantic' in color: any) {
     return [0, color];
   }
 
   // Android PlatformColor
-  if ('resource_paths' in color) {
+  if ('resource_paths' in color: any) {
     return [0, color];
   }
 
